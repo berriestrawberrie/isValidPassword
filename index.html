@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        let password="password123";
+        let username ="milk"
+
+        function isValidPassword(username, password){
+
+            //PASSWORD AT LEAST 8 CHARS
+            let length = password.length;
+            if(length < 8){
+                console.log("Error: Passowrd must be at least 8 characters");
+                return false;
+            }
+            
+            //PASSWORD CANNOT CONTAIN SPACES
+            if( password.includes(" ")){
+                console.log("Error: Passowrd must not contain spaces");
+                return false;
+            }
+
+            //PASSWORD CANNOT CONTAIN USERNAME
+            if( password.includes(username)){
+                console.log("Error: Passowrd must not contain your username");
+                return false;
+            }
+
+            return true;
+            
+
+        }
+
+        isValidPassword(username, password);
+        console.log(isValidPassword(username, password));
+
+        
+    </script>
+</body>
+</html>
